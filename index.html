@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork6</title>
+</head>
+<body>
+    <script>
+        let cylinder = {
+            radius: 10,
+            height: 18,
+
+            getSquare() {
+                return 2 * Math.PI * this.radius * (this.height + this.radius)
+            },
+            getVolume() {
+                return Math.PI * Math.pow(this.radius, 2) * this.height
+            },
+        };
+        console.log(cylinder.getVolume());
+  
+
+
+        let firstNumber = +prompt('Первое число');
+        let secondNumber = +prompt('Второе число');
+        let symbol = prompt('Введите символ');
+
+        function getResult(firstNumber, secondNumber, symbol) {
+            switch (symbol) {
+                case '+':
+                    console.log(firstNumber + secondNumber);
+                    break;
+                case '*':
+                    console.log(firstNumber * secondNumber);
+                    break;
+                case '-':
+                    console.log(firstNumber - secondNumber);
+                    break;
+                case '/':
+                    console.log(firstNumber / secondNumber);
+                    break;
+                default:
+                    console.log('Нет таких символов');
+            }
+        }
+        getResult(firstNumber, secondNumber, symbol);
+        
+
+
+        function isCharPresent(string, char) {
+            for (let i = 0; i < string.length; i++) {
+                if (string[i] === char) {
+                    return true
+                }
+            }
+            return false;
+        }
+        const originString = 'Hello World';
+        console.log(isCharPresent(originString, 'W'));
+
+
+        
+        function charIndexOf(string, char) {
+            for (let i = 0; i < string.length; i++) {
+                if (string[i] === char) {
+                    return i
+                }
+            }
+            return -1;
+        }
+        const stringIndex = 'Hello World';
+        console.log(charIndexOf(stringIndex, 'k'));
+    </script>
+</body>
+</html>
